@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Asian Biodynamic Conference 2025: Healing Himalayas</title>
+    <link rel="icon" href="static/img/background.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <div class="logo">AsianBiodynamic</div>
+            </a>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#pricing">Pricing</a>
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform">Program</a>
+                <a href="#faqs">FAQs</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="static/img/village.jpg" alt="Himalayan landscape with terraced fields" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="content-card">
+                <!-- Date Badge -->
+                <div class="date-badge">November 6–9, 2025</div>
+
+                <!-- Main Heading -->
+                <h2 class="main-heading">
+                    Asian Biodynamic Conference 2025: Healing Himalayas
+                </h2>
+
+                <!-- Description -->
+                <p class="description">
+                    This is where the biodynamic community plays a vital role: to come together, reflect, review, and
+                    plan a way forward.
+                </p>
+
+                <!-- Register Button -->
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform"><button
+                        class="register-btn" onclick="handleRegistration()">
+                        Register Now
+                    </button></a>
+                <a href="#program"><button class="register-btn btn-secondary" onclick="handleRegistration()">
+                        View Program
+                    </button></a>
+
+                <!-- Pagination Dots -->
+                <div class="pagination-dots">
+                    <div class="dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <p>Join 200+ farmers from 30+ countries</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="">
+                <div class="partner">
+                    <img src="static/img/img1.png" alt="Goetheanum Section for Agriculture">
+                    <img src="static/img/img2.png" alt="Biodynamic federation Company">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Event Section -->
+    <section class="event-section" id="about">
+        <p class="subheading">ABOUT THE EVENT</p>
+        <h2>3<sup>rd</sup> Asian Biodynamic Conference & Trainers meeting
+        </h2>
+        <hr class="underline" />
+        <div class="about-bio">
+            <div class="about-sec">
+                <div>
+                    <p class="description">
+                        The Himalayas are under threat, with their ecological foundations, farmland and glacial lakes -
+                        the lifeblood of Asia - disappearing at an alarmimg rate. Could biodynamic agriculture - a
+                        holistic, regenerative farming approach - provide cross-cutting solutions to transform our food
+                        systems and heal our land?
+                    </p>
+                    <p class="description">
+                        We invite farmers, biodynamic initiatives ad associations, local multipliers, and key
+                        stakeholders from the food sector to join us at the 3<SUP>rd</SUP> International Asian
+                        Biodynamic Conference, where we will explore synergies and collaborations for the future of
+                        agriculture in Asia.
+                    </p>
+                </div>
+                <div class="card mission">
+                    <h3>Our Mission</h3>
+                    <p>Aiming to discover new perspectives on biodynamic agriculture in Asia, this conference will place
+                        special emphasis on holistic approaches and integrated studies.</p>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="card green">
+                    <h2>📚</h2>
+                    <h4>Knowledge Sharing</h4>
+                    <p>Exchange farming techniques <br> across cultures</p>
+                </div>
+                <div class="card yellow">
+                    <h2>🌿</h2>
+                    <h4>Biodiversity</h4>
+                    <p>Preserve indigenous crop varieties</p>
+                </div>
+                <div class="card blue">
+                    <h2>🌎</h2>
+                    <h4>Global Network</h4>
+                    <p>Connect with farmers worldwide</p>
+                </div>
+                <div class="card pink">
+                    <h2>🧪</h2>
+                    <h4>Innovation</h4>
+                    <p>Explore sustainable farming solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Mission Section -->
+
+
+    <!-- Footer Section -->
+    <section class="events-bar">
+        <div>
+            <h2>📅</h2>
+            <h4>Dates</h4>
+            <p>November 6–9, 2025</p>
+        </div>
+        <div>
+            <h2>📍</h2>
+            <h4>Location</h4>
+            <p>Hotel Grand, Pokhara</p>
+        </div>
+        <div>
+            <h2>👥</h2>
+            <h4>Participants</h4>
+            <p>200+ farmers from 30+ countries</p>
+        </div>
+        <!-- <div>
+            <h2>💰</h2>
+            <h4>Registration Fee</h4>
+            <p>Regular Price: $250</p>
+        </div> -->
+    </section>
+
+    <section class="event-section" id="pricing">
+        <p class="subheading">ABOUT THE PRICE</p>
+        <h2>Conference Ticket Pricing</h2>
+        <hr class="underline" />
+        <section class="pricing-section">
+            <div class="pricing-card premium">
+                <div class="prices">
+                    <h2>Sponsor Price</h2>
+                    <p class="price">$250<span><!--/monts--></span></p>
+                    <ul class="features">
+                        <!-- <li>✅ Participation Certificate</li>
+                    <li>✅ Conference Materials</li> -->
+                    </ul>
+                    <a href="#" class="button">Pay</a>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="prices">
+                    <h2>Regular Price</h2>
+                    <p class="price">$180</p>
+                    <ul class="features">
+                        <!-- <li>✅ Participation Certificate</li>
+                    <li>✅ Conference Materials</li>
+                    <li>✅ Translation & Facilitation Support</li> -->
+                    </ul>
+                    <a href="#" class="button">Pay</a>
+                </div>
+            </div>
+
+
+            <div class="pricing-card">
+                <div class="prices">
+                    <h2>Discounted Price</h2>
+                    
+                    <ul class="features">
+                        <li>Email to: healinghimalayas2028@gmail.com</li>
+
+                    </ul>
+                    <a href="#" class="button">Pay</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- <section class="event" id="program">
+        <div class="event-section">
+            <p class="subheading">9-DAY PROGRAM</p>
+            <h2>Event Schedule</h2>
+            <hr class="underline" />
+            <div>
+                <p class="schedule-paragraph">
+                    Explore our comprehensive program designed to provide valuable insights, hands-on experience,
+                    and meaningful connections.
+                </p>
+            </div>
+            <div class="days-container">
+          
+                <div class="day-column">
+                    <div class="day">
+                        <div class="day-number">31<sup>st</sup> Oct-1<sup>st</sup> Nov</div>
+                        <div class="day-theme">Agriculture Workshop</div>
+                        <ul class="activities">
+                            <li class="activity">Locations: Sindhupalchowk, Nawalparasi, Saptari, Kathmandu, Pokhara,
+                                and Tanahun
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <div class="day-number">2<sup>nd</sup> Nov</div>
+                        <div class="day-theme">Arrival</div>
+                        <ul class="activities">
+                            <li class="activity">Preparations Making:
+                                BD 500
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <div class="day-number">3<sup>rd</sup> Nov</div>
+                        <div class="day-theme">Knowledge Sharing Sessions</div>
+                        <ul class="activities">
+                            <li class="activity">Landscape Walking</li>
+                            <li class="activity">Lecture: Farm Organisms</li>
+                            <li class="activity">Preparations Plants</li>
+                            <li class="activity">Preparations Making:
+                                BD 502,503,504
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+          
+                <div class="day-column">
+                    <div class="day">
+                        <div class="day-number">4<sup>th</sup> Nov</div>
+                        <div class="day-theme">Hands-on Workshops</div>
+                        <ul class="activities">
+                            <li class="activity">Landscape Walking</li>
+                            <li class="activity">Farm Individuality</li>
+                            <li class="activity">Preparations Plants</li>
+                            <li class="activity">Preparations Making:
+                                BD 505,506,507
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">5<sup>th</sup> Nov</div>
+                        <div class="day-theme">Meeting</div>
+                        <ul class="activities">
+                            <li class="activity">Advisory Meeting</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <div class="day-number">6<sup>th</sup> Nov</div>
+                        <div class="day-theme">Innovation & Future</div>
+                        <ul class="activities">
+                            <li class="activity">Arrival
+                                Registration
+                            </li>
+                            <li class="activity">Introduction</li>
+                            <li class="activity">Workshop</li>
+                            <li class="activity">Welcome Reception</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="day-column">
+                    <div class="day">
+                        <div class="day-number">7<sup>th</sup> Nov</div>
+                        <div class="day-theme">Workshop</div>
+                        <ul class="activities">
+                            <li class="activity">Eurythmy</li>
+                            <li class="activity">Keynote</li>
+                            <li class="activity">Overview of the Nepalese Agriculture from Nepali Expert</li>
+                            <li class="activity">Workshop</li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">8<sup>th</sup> Nov</div>
+                        <div class="day-theme">Closing & Celebration</div>
+                        <ul class="activities">
+                            <li class="activity">Eurythmy</li>
+                            <li class="activity">Keynote</li>
+                            <li class="activity">Overview of the Nepalese Agriculture from Nepali Expert</li>
+                            <li class="activity">Workshop</li>
+                            <li class="activity">Cultural Evening</li>
+                        </ul>
+                    </div>
+
+                    <div class="day">
+                        <div class="day-number">9<sup>th</sup> Nov</div>
+                        <div class="day-theme">Departure</div>
+                        <ul class="activities">
+                            <li class="activity">Eurythmy</li>
+                            <li class="activity">Keynote</li>
+                            <li class="activity">Overview of the Nepalese Agriculture from Nepali Expert</li>
+                            <li class="activity">Lunch and Departure</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform"
+                class="cta-button">Secure Your Spot Now</a>
+        </div>
+
+        </div>
+    </section> 
+
+   <section class="event-section" id="register">
+        <div class="form-header">
+            <span class="subheading">JOIN US</span>
+            <h1>Register for the Meetup</h1>
+            <hr class="underline">
+            <p class="subtitle">Secure your spot at this transformative event. Limited seats available.</p>
+        </div>
+
+        <div class="container">
+
+            <form id="registrationForm" class="registration-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name<span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name<span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number<span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country<span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select id="country" name="country" required>
+                                <option value="" disabled selected>Select your country</option>
+                                <option value="np">Nepal</option>
+                                <option value="in">India</option>
+                                <option value="bg">Bangladesh</option>
+                                <option value="th">Thailand</option>
+                                <option value="jp">Japan</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="organization">Organization/Farm Name</label>
+                        <input type="text" id="organization" name="organization">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Pricing<span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="radio" id="Regular-Price" name="Pricing" value="regularprice">
+                            <label for="Regular-Price">Regular Price: $250</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="radio" id="Early-Bird" name="Pricing" value="earlybird">
+                            <label for="Early-Bird">Early Bird: $180</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="dietary">Dietary Requirements</label>
+                    <input type="text" id="dietary" name="dietary" placeholder="Vegetarian, vegan, allergies, etc.">
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="expectations">What do you hope to learn or share at the meetup?</label>
+                    <textarea id="expectations" name="expectations" rows="4"></textarea>
+                </div>
+
+                <div class="form-group full-width terms-container">
+                    <div class="checkbox-item terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the terms and <a href="#" class="terms-link">conditions</a> and
+                            understand that the registration fee is payable upon confirmation.<span
+                                class="required">*</span></label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </section> -->
+
+    <section class="event" id="faqs">
+        <section class="event-section">
+            <p class="subheading">QUESTIONS</p>
+            <h2>Frequently Asked Questions</h2>
+            <hr class="underline" />
+            <div class="containers">
+                <div class="accordion">
+                    <!-- First item (expanded by default) -->
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h2>What is included in the conference ticket?</h2>
+                            <div class="accordion-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-up">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Your ticket covers the full program, 3 nights’ accommodation, 3 breakfasts, 4 lunches,
+                                coffee
+                                breaks, and 3 dinners.</p>
+
+                        </div>
+                    </div>
+
+                    <!-- Second item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2>Can I stay additional nights at the hotel?</h2>
+                            <div class="accordion-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-up">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes, extended stays can be arranged directly with the hotel if you wish to arrive earlier
+                                or
+                                leave later.</p>
+                        </div>
+                    </div>
+
+                    <!-- Third item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2>Do I need a visa to enter Nepal?</h2>
+                            <div class="accordion-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-up">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Most visitors can obtain an on-arrival visa at Tribhuvan International Airport (TIA) or
+                                major
+                                border entry points.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fourth item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2>Are trekking activities included in the ticket?</h2>
+                            <div class="accordion-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-up">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>No, trekking is optional and not included in the ticket. You can reserve it during
+                                conference
+                                registration.</p>
+
+                        </div>
+                    </div>
+
+                    <!-- Fifth Item-->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h2> What language will the conference be conducted in?</h2>
+                            <div class="accordion-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-up">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="chevron-down">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <p>The conference will be held in English.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo and Tagline -->
+            <div class="footer-section brand-section">
+                <div class="logo">
+                    <i class="fas fa-leaf logo-icon"></i>
+                    <h2>AsianBiodynamic <span>Nepal</span></h2>
+                </div>
+                <p class="tagline">
+                    Connecting farmers, preserving biodiversity, and promoting sustainable agriculture worldwide.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section links-section">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSei9KUPh4ZQwUzxWjzxru6Dz603Y5WF_ZqHjIJQBfRly-SgRg/viewform">Register</a>
+                    </li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section contact-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@biodiversitynepal.org">healinghimalayas2025@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+97714123456">+977-9846526728</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hotel Grand, Pokhara</span>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 BiodynamicNepal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script>
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add button click functionality (for demonstration)
+
+
+
+
+        //Nav
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Pagination dots functionality
+        const dots = document.querySelectorAll('.dot');
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', function () {
+                // Remove active class from all dots
+                dots.forEach(d => d.classList.remove('active'));
+                // Add active class to clicked dot
+                this.classList.add('active');
+
+                // Here you could implement slide functionality if you had multiple slides
+                console.log(`Slide ${index + 1} selected`);
+            });
+        });
+    </script>
+</body>
+
+</html>
