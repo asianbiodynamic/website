@@ -214,3 +214,117 @@ window.addEventListener('scroll', () => {
     const header = document.querySelector('nav');
     header.classList.toggle('scrolled', window.scrollY > 50);
 });
+
+
+//program js
+ // Loading simulation and table initialization
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simulate loading
+            setTimeout(function () {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('scheduleTable').style.display = 'table';
+
+                // Add fade-in animation
+                document.getElementById('scheduleTable').style.opacity = '0';
+                document.getElementById('scheduleTable').style.transition = 'opacity 0.5s ease-in-out';
+
+                setTimeout(function () {
+                    document.getElementById('scheduleTable').style.opacity = '1';
+                }, 100);
+            }, 1500);
+        });
+
+        // Responsive table handling
+        function handleTableResize() {
+            const table = document.querySelector('.schedule-table');
+            const container = document.querySelector('.table-container');
+
+            if (window.innerWidth <= 768) {
+                // Add touch scroll indicators for mobile
+                container.style.overflowX = 'auto';
+                container.style.webkitOverflowScrolling = 'touch';
+            }
+        }
+
+        // Initialize responsive handling
+        window.addEventListener('load', handleTableResize);
+        window.addEventListener('resize', handleTableResize);
+
+        // Smooth scroll for horizontal scrolling on mobile
+        let isScrolling = false;
+        const tableContainer = document.querySelector('.table-container');
+
+        tableContainer.addEventListener('scroll', function () {
+            if (!isScrolling) {
+                window.requestAnimationFrame(function () {
+                    // Add visual feedback for scrolling
+                    tableContainer.style.boxShadow = 'inset 0 0 10px rgba(0,0,0,0.1)';
+
+                    setTimeout(function () {
+                        tableContainer.style.boxShadow = 'none';
+                    }, 150);
+
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+
+        // Print functionality
+        function printSchedule() {
+            window.print();
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const container = document.querySelector('.table-container');
+
+            if (e.key === 'ArrowLeft') {
+                container.scrollLeft -= 50;
+            } else if (e.key === 'ArrowRight') {
+                container.scrollLeft += 50;
+            }
+        });
+
+        // Performance optimization: Lazy load content
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        // Observe table rows for animation
+        document.querySelectorAll('tr').forEach(row => {
+            observer.observe(row);
+        });
+
+        // Add accessibility improvements
+        document.querySelectorAll('.schedule-table td').forEach(cell => {
+            if (cell.textContent.trim() === '') {
+                cell.setAttribute('aria-label', 'No scheduled activity');
+            }
+        });
+
+        // Mobile touch gestures
+        let startX = 0;
+        let scrollLeft = 0;
+
+        tableContainer.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].pageX - tableContainer.offsetLeft;
+            scrollLeft = tableContainer.scrollLeft;
+        });
+
+        tableContainer.addEventListener('touchmove', function (e) {
+            if (!startX) return;
+
+            e.preventDefault();
+            const x = e.touches[0].pageX - tableContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            tableContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        tableContainer.addEventListener('touchend', function () {
+            startX = 0;
+        });
