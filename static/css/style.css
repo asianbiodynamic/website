@@ -10,6 +10,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 nav {
@@ -1547,7 +1548,7 @@ select {
 
 .schedule-table th {
     background: #f4f8ff;
-    border: 2px solid #333;
+    border: 1.5px solid #4b4b4b;
     padding: 15px 10px;
     text-align: center;
     font-weight: 700;
@@ -1559,7 +1560,7 @@ select {
 }
 
 .schedule-table td {
-    border: 1.5px solid #333;
+    border: 1px solid #6d6d6d;
     padding: 12px 8px;
     vertical-align: top;
     background: white;
@@ -1580,32 +1581,34 @@ select {
     color: #16a34a;
     display: block;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 
 /* Activity styling */
 .activity-title {
-    font-weight: 600;
+    font-weight: 700;
     color: #1f2937;
     margin-bottom: 3px;
+    font-size: 20px;
 }
 
 .activity-description {
-    color: #6b7280;
-    font-size: 13px;
+    color: #333;
+    font-size: 16px;
     font-style: italic;
     margin-bottom: 3px;
 }
 
 .venue {
     color: #7c3aed;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
 }
 
 .speaker {
-    color: #dc2626;
+    color: #b826dcc1;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 /* Empty cells */
@@ -1853,3 +1856,10 @@ select {
     color: #16a34a;
 }
 
+.one-line{
+    color: #4a7c59;
+    font-weight: 900;
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 25px;
+}
