@@ -446,7 +446,7 @@ html {
     background-color: #e4fdf0;
 }
 
-.card.yellow {
+.card.yello {
     background-color: #fffccf;
 }
 
@@ -1538,6 +1538,10 @@ select {
     padding: 0;
 }
 
+thead tr th {
+    background-color: #054E84;
+}
+
 .schedule-table {
     width: 95%;
     margin: 3px auto;
@@ -1547,24 +1551,28 @@ select {
 }
 
 .schedule-table th {
-    background: #f4f8ff;
-    border: 1.5px solid #4b4b4b;
+    /* background: #f4f8ff; */
+    /* border: 1.5px solid #4b4b4b; */
     padding: 15px 10px;
     text-align: center;
     font-weight: 700;
     font-size: 16px;
-    color: #333;
+    color: #fff;
     position: sticky;
     top: 0;
     z-index: 10;
+    margin: 10px 0px;
 }
 
 .schedule-table td {
-    border: 1px solid #6d6d6d;
-    padding: 12px 8px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    padding: 12px;
     vertical-align: top;
     background: white;
     min-height: 50px;
+    max-width: 200px;
+    margin: 10px;
 }
 
 .schedule-table tr:nth-child(even) td {
@@ -1578,7 +1586,7 @@ select {
 /* Time styling */
 .time {
     font-weight: 700;
-    color: #16a34a;
+    color: #7B7975;
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
@@ -1587,13 +1595,13 @@ select {
 /* Activity styling */
 .activity-title {
     font-weight: 700;
-    color: #1f2937;
+    color: #7B7975;
     margin-bottom: 3px;
     font-size: 20px;
 }
 
 .activity-description {
-    color: #333;
+    color: #989386;
     font-size: 16px;
     font-style: italic;
     margin-bottom: 3px;
@@ -1654,10 +1662,12 @@ select {
     .schedule-table td {
         padding: 8px 5px;
     }
-    nav .logo{
+
+    nav .logo {
         font-size: 1.3rem;
     }
-    .nav-links{
+
+    .nav-links {
         gap: 1rem;
     }
 }
@@ -1722,6 +1732,9 @@ select {
 
     .schedule-table td {
         padding: 5px 3px;
+    }
+    .location-map{
+        width: 80%;
     }
 }
 
@@ -1856,10 +1869,33 @@ select {
     color: #16a34a;
 }
 
-.one-line{
-    color: #4a7c59;
+.one-line {
     font-weight: 900;
     margin-bottom: 3px;
     text-align: center;
     font-size: 25px;
+}
+
+tr td .color1 {
+    background: #FEC87D;
+}
+
+.flex-one {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 30%;
+    color: #80796F;
+}
+
+.flex-one span, .one-line{
+    color: #80796F;
+}
+
+.color1 td span,div.title {
+    color: #fff;
+}
+
+.yellow{
+    color: #B9BE7D;
 }
