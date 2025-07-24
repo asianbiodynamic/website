@@ -217,114 +217,112 @@ window.addEventListener('scroll', () => {
 
 
 //program js
- // Loading simulation and table initialization
-        document.addEventListener('DOMContentLoaded', function () {
-            // Simulate loading
-            setTimeout(function () {
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('scheduleTable').style.display = 'table';
+// Loading simulation and initialization
+document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('scheduleTable').style.display = 'table';
+        document.getElementById('scheduleTable').style.opacity = '0';
+        document.getElementById('scheduleTable').style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(function () {
+            document.getElementById('scheduleTable').style.opacity = '1';
+        }, 100);
+    }, 1500);
+});
 
-                // Add fade-in animation
-                document.getElementById('scheduleTable').style.opacity = '0';
-                document.getElementById('scheduleTable').style.transition = 'opacity 0.5s ease-in-out';
-
-                setTimeout(function () {
-                    document.getElementById('scheduleTable').style.opacity = '1';
-                }, 100);
-            }, 1500);
-        });
-
-        // Responsive table handling
-        function handleTableResize() {
-            const table = document.querySelector('.schedule-table');
-            const container = document.querySelector('.table-container');
-
-            if (window.innerWidth <= 768) {
-                // Add touch scroll indicators for mobile
-                container.style.overflowX = 'auto';
-                container.style.webkitOverflowScrolling = 'touch';
-            }
+// Performance optimization: Intersection Observer for animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
+    });
+}, { threshold: 0.1 });
 
-        // Initialize responsive handling
-        window.addEventListener('load', handleTableResize);
-        window.addEventListener('resize', handleTableResize);
+// Observe elements for fade-in animation
+document.querySelectorAll('.day-card, .activity-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
 
-        // Smooth scroll for horizontal scrolling on mobile
-        let isScrolling = false;
-        const tableContainer = document.querySelector('.table-container');
+// Accessibility improvements
+document.querySelectorAll('.activity-item').forEach(item => {
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'article');
+});
 
-        tableContainer.addEventListener('scroll', function () {
-            if (!isScrolling) {
-                window.requestAnimationFrame(function () {
-                    // Add visual feedback for scrolling
-                    tableContainer.style.boxShadow = 'inset 0 0 10px rgba(0,0,0,0.1)';
+// Touch gesture optimization for mobile
+let touchStartY = 0;
+let touchEndY = 0;
 
-                    setTimeout(function () {
-                        tableContainer.style.boxShadow = 'none';
-                    }, 150);
+document.addEventListener('touchstart', function (e) {
+    touchStartY = e.changedTouches[0].screenY;
+});
 
-                    isScrolling = false;
-                });
-                isScrolling = true;
-            }
-        });
+document.addEventListener('touchend', function (e) {
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+});
 
-        // Print functionality
-        function printSchedule() {
-            window.print();
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartY - touchEndY;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        // Add smooth scroll behavior for swipe gestures
+        if (diff > 0) {
+            // Swipe up - scroll down
+            window.scrollBy({ top: 100, behavior: 'smooth' });
+        } else {
+            // Swipe down - scroll up
+            window.scrollBy({ top: -100, behavior: 'smooth' });
         }
+    }
+}
 
-        // Add keyboard navigation
-        document.addEventListener('keydown', function (e) {
-            const container = document.querySelector('.table-container');
+// Optimize for very small screens
+function optimizeForSmallScreen() {
+    if (window.innerWidth <= 200) {
+        // Further optimize for 200px screens
+        document.body.style.fontSize = '10px';
 
-            if (e.key === 'ArrowLeft') {
-                container.scrollLeft -= 50;
-            } else if (e.key === 'ArrowRight') {
-                container.scrollLeft += 50;
-            }
+        // Compress spacing even more
+        const dayCards = document.querySelectorAll('.day-card');
+        dayCards.forEach(card => {
+            card.style.marginBottom = '0.25rem';
         });
 
-        // Performance optimization: Lazy load content
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
+        const activityItems = document.querySelectorAll('.activity-item');
+        activityItems.forEach(item => {
+            item.style.padding = '0.2rem';
+            item.style.marginBottom = '0.2rem';
         });
+    }
+}
 
-        // Observe table rows for animation
-        document.querySelectorAll('tr').forEach(row => {
-            observer.observe(row);
-        });
+window.addEventListener('resize', optimizeForSmallScreen);
+window.addEventListener('load', optimizeForSmallScreen);
 
-        // Add accessibility improvements
-        document.querySelectorAll('.schedule-table td').forEach(cell => {
-            if (cell.textContent.trim() === '') {
-                cell.setAttribute('aria-label', 'No scheduled activity');
-            }
-        });
+// Prevent horizontal scroll
+document.addEventListener('touchmove', function (e) {
+    if (e.touches.length > 1) {
+        e.preventDefault();
+    }
+}, { passive: false });
 
-        // Mobile touch gestures
-        let startX = 0;
-        let scrollLeft = 0;
+// Add keyboard navigation
+document.addEventListener('keydown', function (e) {
+    const focusableElements = document.querySelectorAll('.activity-item[tabindex="0"]');
+    const currentIndex = Array.from(focusableElements).indexOf(document.activeElement);
 
-        tableContainer.addEventListener('touchstart', function (e) {
-            startX = e.touches[0].pageX - tableContainer.offsetLeft;
-            scrollLeft = tableContainer.scrollLeft;
-        });
-
-        tableContainer.addEventListener('touchmove', function (e) {
-            if (!startX) return;
-
-            e.preventDefault();
-            const x = e.touches[0].pageX - tableContainer.offsetLeft;
-            const walk = (x - startX) * 2;
-            tableContainer.scrollLeft = scrollLeft - walk;
-        });
-
-        tableContainer.addEventListener('touchend', function () {
-            startX = 0;
-        });
+    if (e.key === 'ArrowDown' && currentIndex < focusableElements.length - 1) {
+        e.preventDefault();
+        focusableElements[currentIndex + 1].focus();
+    } else if (e.key === 'ArrowUp' && currentIndex > 0) {
+        e.preventDefault();
+        focusableElements[currentIndex - 1].focus();
+    }
+});
