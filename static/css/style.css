@@ -1899,3 +1899,14 @@ tr td .color1 {
 .yellow{
     color: #B9BE7D;
 }
+
+.email-to{
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid green;
+    font-size: 20px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    margin: 10px auto 0 auto;
+}
