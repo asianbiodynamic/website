@@ -167,7 +167,7 @@ a {
     }
 
     .nav-links a {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
         width: 100%;
         text-align: center;
         border-radius: 0;
@@ -179,7 +179,7 @@ a {
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .demo-section {
@@ -190,6 +190,7 @@ a {
     .demo-section h2 {
         font-size: 1.5rem;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -735,7 +736,7 @@ html {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        gap: 1rem;
+        gap: 0rem;
     }
 
     .hero-content h1 {
@@ -1848,6 +1849,9 @@ select {
     .cta-title {
         font-size: 1.3rem;
     }
+    .about-bio{
+        flex-direction: column;
+    }
 }
 
 /* Ultra Small Mobile (480px and below) */
@@ -2084,11 +2088,11 @@ select {
 }
 
 .email-to {
-    padding: 10px 30px;
+    padding: 5px 10px;
     border-radius: 10px;
     background-color: #ace1c6;
     border: 1px solid green;
-    font-size: 20px;
+    font-size: 16px;
     color: #333;
     transition: border-color 0.3s ease;
     margin: 10px auto 0 auto;
