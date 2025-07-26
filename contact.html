@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <title>Contact Us - Asian Biodynamic Conference 2025</title>
     <link rel="icon" href="static/img/background.jpg" type="image/x-icon">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <nav id="navbar">
@@ -31,7 +33,7 @@
         </div>
     </nav>
 
-   
+
 
 
     <!-- Contact Form Section -->
@@ -40,9 +42,10 @@
             <span class="subheading">SEND MESSAGE</span>
             <h2>Get In Touch With Us</h2>
             <hr class="underline">
-            <p class="subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <p class="subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon
+                as possible.</p>
         </div>
-        
+
         <div class="container">
             <form id="contactForm" class="registration-form">
                 <div class="form-row">
@@ -55,7 +58,7 @@
                         <input type="text" id="lastName" name="lastName" required>
                     </div> -->
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email Address<span class="required">*</span></label>
@@ -66,7 +69,7 @@
                         <input type="tel" id="phone" name="phone">
                     </div> -->
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="country">Country</label>
@@ -99,17 +102,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- <div class="form-group full-width">
                     <label for="organization">Organization/Farm Name</label>
                     <input type="text" id="organization" name="organization" placeholder="Your organization or farm name">
                 </div> -->
-                
+
                 <div class="form-group full-width">
                     <label for="message">Message<span class="required">*</span></label>
-                    <textarea id="message" name="message" rows="6" placeholder="Please describe your inquiry or question in detail..." required></textarea>
+                    <textarea id="message" name="message" rows="6"
+                        placeholder="Please describe your inquiry or question in detail..." required></textarea>
                 </div>
-                
+
                 <div class="form-group full-width">
                     <button type="submit" class="submit-btn">Send Message</button>
                 </div>
@@ -122,7 +126,7 @@
         <p class="subheading">LOCATION</p>
         <h2>Find Us Here</h2>
         <hr class="underline" />
-        
+
         <div class="map-container">
             <div class="map-info">
                 <h3>Conference Venue</h3>
@@ -150,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="map-embed">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.48279052586!2d83.974133!3d28.192640899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995947f46c285f1%3A0xf5d4c9373a90193e!2sHotel%20Pokhara%20Grande!5e0!3m2!1sen!2snp!4v1752655869117!5m2!1sen!2snp"
@@ -175,7 +179,7 @@
                     Connecting, preserving biodiversity, and promoting sustainable agriculture worldwide.
                 </p>
             </div>
-            
+
             <!-- Quick Links -->
             <div class="footer-section links-section">
                 <h3>Quick Links</h3>
@@ -187,7 +191,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            
+
             <!-- Contact Information -->
             <div class="footer-section contact-section">
                 <h3>Contact Us</h3>
@@ -208,11 +212,12 @@
                     </li>
                 </ul>
                 <div class="social-icons">
+
+                    <a href="https://www.facebook.com/groups/720136057386432/" class="social-icon facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
                     <a href="#" class="social-icon twitter">
                         <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon facebook">
-                        <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="#" class="social-icon instagram">
                         <i class="fab fa-instagram"></i>
@@ -223,7 +228,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Copyright -->
         <div class="copyright">
             <p>&copy; 2025 BiodynamicNepal. All rights reserved.</p>
@@ -252,12 +257,12 @@
             header.addEventListener('click', () => {
                 const item = header.parentElement;
                 const isActive = item.classList.contains('active');
-                
+
                 // Close all accordion items
                 document.querySelectorAll('.accordion-item').forEach(accordionItem => {
                     accordionItem.classList.remove('active');
                 });
-                
+
                 // Open clicked item if it wasn't active
                 if (!isActive) {
                     item.classList.add('active');
@@ -266,19 +271,19 @@
         });
 
         // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
+
             // Simulate form submission (replace with actual submission logic)
             console.log('Contact form submitted:', data);
-            
+
             // Show success message
             document.getElementById('successMessage').classList.add('show');
-            
+
             // Reset form
             this.reset();
         });
@@ -312,7 +317,7 @@
             min-height: 60vh;
         }
 
-        .contact-margin{
+        .contact-margin {
             margin-top: 3rem;
         }
 
@@ -483,4 +488,5 @@
         }
     </style>
 </body>
+
 </html>
