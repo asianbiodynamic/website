@@ -2104,3 +2104,12 @@ select {
     font-size: 18px;
     color: #333;
 }
+
+.donate{
+    text-align: center;
+    background-color: #1e6b32;
+}
+
+.nav-links a .donate{
+    color: #fff;
+}
