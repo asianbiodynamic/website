@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Biodynamic Conference 2025 - Program Schedule</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .date-info {
+            background: #eab308;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            padding: 0;
+        }
+
+        .schedule-table {
+            width: 95%;
+            margin: 3px auto;
+            border-collapse: collapse;
+            font-size: 14px;
+            background: white;
+        }
+
+        .schedule-table th {
+            background: #f8f9fa;
+            border: 2px solid #333;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .schedule-table td {
+            border: 1.5px solid #333;
+            padding: 12px 8px;
+            vertical-align: top;
+            background: white;
+            min-height: 50px;
+        }
+
+        .schedule-table tr:nth-child(even) td {
+            background: #f7f7f7;
+        }
+
+        .schedule-table tr td:hover {
+            background: #f0f9ff;
+        }
+
+        /* Time styling */
+        .time {
+            font-weight: 700;
+            color: #16a34a;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Activity styling */
+        .activity-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 3px;
+        }
+
+        .activity-description {
+            color: #6b7280;
+            font-size: 13px;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .venue {
+            color: #7c3aed;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .speaker {
+            color: #dc2626;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        /* Empty cells */
+        .empty-cell {
+            background: #f9fafb !important;
+            min-height: 60px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1200px) {
+            .schedule-table {
+                font-size: 13px;
+            }
+
+            .schedule-table th {
+                padding: 12px 8px;
+                font-size: 14px;
+            }
+
+            .schedule-table td {
+                padding: 10px 6px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .schedule-table {
+                font-size: 12px;
+            }
+
+            .schedule-table th {
+                padding: 10px 6px;
+                font-size: 13px;
+            }
+
+            .schedule-table td {
+                padding: 8px 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .date-info {
+                padding: 10px;
+                font-size: 1rem;
+            }
+
+            .schedule-table {
+                font-size: 11px;
+            }
+
+            .schedule-table th {
+                padding: 8px 4px;
+                font-size: 12px;
+            }
+
+            .schedule-table td {
+                padding: 6px 4px;
+            }
+
+            .time {
+                font-size: 12px;
+            }
+
+            .activity-title {
+                font-size: 12px;
+            }
+
+            .activity-description {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .schedule-table {
+                font-size: 10px;
+            }
+
+            .schedule-table th {
+                padding: 6px 3px;
+                font-size: 11px;
+            }
+
+            .schedule-table td {
+                padding: 5px 3px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .schedule-table {
+                font-size: 10px;
+            }
+
+            .schedule-table th,
+            .schedule-table td {
+                border: 1px solid #000 !important;
+                padding: 5px !important;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            font-size: 1.2rem;
+            color: #16a34a;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #16a34a;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            text-align: center;
+            padding: 10px;
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 14px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .scroll-indicator {
+                display: block;
+            }
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        .cta-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .cta-btn-primary {
+            background: #eab308;
+            color: #111827;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #16a34a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-leaf"></i> Asian Biodynamic Conference 2025</h1>
+            <p>Healing Himalayas - Program Schedule</p>
+        </div>
+
+        <div class="date-info">
+            <i class="fas fa-calendar-alt"></i> November 6–9, 2025 • Hotel Grand, Pokhara
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to view all days
+        </div>
+
+        <div class="table-container">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                Loading schedule...
+            </div>
+
+            <table class="schedule-table" id="scheduleTable" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>6th November<br><small>Thursday</small></th>
+                        <th>7th November<br><small>Friday</small></th>
+                        <th>8th November<br><small>Saturday</small></th>
+                        <th>9th November<br><small>Sunday</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1: Early Morning -->
+                    <tr>
+                        <td rowspan="4"></td>
+                        <td colspan="3">
+                            <span class="time">7:00</span>
+                            <div class="activity-title">Tuning in exercise</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 2: Breakfast -->
+                    <tr>
+                        <td colspan="3">
+                            <span class="time">7:45</span>
+                            <div class="activity-title">Breakfast</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 3: Morning Reflection -->
+                    <tr>
+                        <td colspan="3">
+                            <span class="time">8:45am</span>
+                            <div class="activity-title">Morning Reflection</div>
+                            <div class="speaker">(Eduardo)</div>
+                        </td>
+                        <!-- <td>
+                            <span class="time">8:45am</span>
+                            <div class="activity-title">Morning Reflection</div>
+                            <div class="speaker">(Eduardo)</div>
+                        </td>
+                        <td>
+                            <span class="time">8:45am</span>
+                            <div class="activity-title">Morning Reflection</div>
+                            <div class="speaker">(Eduardo)</div>
+                        </td> -->
+                    </tr>
+
+                    <!-- Row 4: 9am Activities -->
+                    <tr>
+                        <td>
+                            <span class="time">9am</span>
+                            <div class="activity-title">Presentations: Regeneration and Development-Towards Sustainable
+                                Himalaya:</div>
+                            <div class="activity-description">(Contents relating to workshop themes)</div>
+                        </td>
+                        <td>
+                            <span class="time">9am</span>
+                            <div class="activity-title">Excursion: On Site Farm Study</div>
+                            <br>
+                            <div class="activity-title">Farm 1</div>
+                            <div class="activity-description">Substance as Carrier of Spirit</div>
+                            <div class="venue">Venue: Maya Eco Village</div>
+                            <br>
+                            <div class="activity-title">Farm 2</div>
+                            <div class="activity-description">Building Peace through Living Community (farm organism and
+                                individuality)</div>
+                            <div class="venue">Venue: Maitreya Pathshala</div>
+                            <br>
+                            <div class="activity-title">Farm 3</div>
+                            <div class="activity-description">Community Farming</div>
+                            <div class="venue">Venue: Mariche Village</div>
+                            <br>
+                            <div class="activity-title">Farm 4</div>
+                            <div class="activity-description">Farming Training and Community Engagement</div>
+                            <div class="venue">Venue: Holy Green Organic farm.</div>
+                        </td>
+                        <td>
+                            <span class="time">9am</span>
+                            <div class="activity-title">Plenary: workshop group exchange</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 5: Coffee Break / Arrival -->
+                    <tr>
+                        <td rowspan="3">
+                            <span class="time">12:30</span>
+                            <div class="activity-title">Arrival</div>
+                            <div class="activity-title">Registration</div>
+                        </td>
+                        <td colspan="3">
+                            <span class="time">10:30</span>
+                            <div class="activity-title">Coffee Break</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 6: Panel Discussion / Closing Panel -->
+                    <tr>
+                        <td>
+                            <span class="time">11:00</span>
+                            <div class="activity-title">Panel Discussion: Regeneration and Development-Towards
+                                Sustainable Himalaya:</div>
+                        </td>
+                        <td class="empty-cell"></td>
+                        <td>
+                            <div class="activity-title">Closing Panel</div>
+                            <div class="activity-description">"Living Himalaya" - Living Impulse of Healing Himalaya and
+                                Agri-Culture Movement".</div>
+                            <div class="speaker">– Eduardo Rincón</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 7: Lunch -->
+                    <tr>
+                        <td colspan="2">
+                            <span class="time">12:30</span>
+                            <div class="activity-title">Lunch</div>
+                        </td>
+                        <!-- <td>
+                            <span class="time">12:30</span>
+                            <div class="activity-title">Lunch</div>
+                        </td> -->
+                        <td rowspan="5">
+                            <span class="time">12:30</span>
+                            <div class="activity-title">Social Lunch and Departure</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 8: Opening / Workshop -->
+                    <tr>
+                        <td rowspan="3">
+                            <span class="time">14:00</span>
+                            <div class="activity-title">Opening "Healing Himalaya Conference"</div>
+                            <br>
+                            <span class="time">14:10</span>
+                            <div class="activity-description">mins ritual to open up the space.</div>
+                            <br>
+                            <span class="time">14:15</span>
+                            <div class="activity-title">Inaugural address</div>
+                            <div class="speaker">by the Chief Minister of Gandaki: Mr Surendra Pandey</div>
+                            <br>
+                            <span class="time">14:30</span>
+                            <div class="activity-title">Inaugural address</div>
+                            <div class="speaker">by Head of Agriculture Section, Goetheanum: Eduardo Rincón</div>
+                            <br>
+                            <span class="time">14:45</span>
+                            <div class="activity-title">Presentation</div>
+                            <div class="activity-description">"The Ecological and Social Situation in the Himalaya
+                                today: Challenges and Opportunities – Exploring eco farming and ancient wisdom in the
+                                Himalaya region".</div>
+                            <br>
+                            <span class="time">3:30pm-4:00</span>
+                            <div class="activity-title">Break</div>
+                            <br>
+                            <span class="time">4:00-5:30pm</span>
+                            <div class="activity-title">Followed by Panel Discussion</div>
+                            <div class="activity-description">(Representatives from Himalayan region, from
+                                environmental, ecological, Biodynamic farming, economics, sociology etc.)</div>
+                        </td>
+                        <td>
+                            <span class="time">14:00</span>
+                            <div class="activity-title">Workshop Part I</div>
+                        </td>
+                        <td>
+                            <span class="time">14:00</span>
+                            <div class="activity-title">Workshop Part II</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 9: Break -->
+                    <tr>
+
+                        <td colspan="2">
+                            <span class="time">16:00</span>
+                            <div class="activity-title">Coffee Break</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 10: Panel Discussion / Artistic Process -->
+                    <tr>
+                        <td>
+                            <span class="time">16:30</span>
+                            <div class="activity-title">Artistic process as healing instrument</div>
+                            <div class="activity-description">(connecting heaven and earth)</div>
+                        </td>
+                        <td>
+                            <span class="time">16:30</span>
+                            <div class="activity-title">Artistic process as healing instrument</div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 11: Evening Events -->
+                    <tr>
+                        <td>
+                            <span class="time">18:00</span>
+                            <div class="activity-title">Welcome performance by Himalayans. Himalayans food feast.</div>
+                            <div class="activity-description">Dinner Night Cafe</div>
+                            <div class="activity-description">Cultural Evening (International participation)</div>
+                        </td>
+                        <td>
+                            <div class="activity-title">Dinner</div>
+                            <div class="activity-description">Night Cafe</div>
+                        </td>
+                        <td>
+                            <div class="activity-title">Cultural Evening</div>
+                            <div class="activity-description">(International participation)</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <section class="cta-section">
+            <h3 class="cta-title">Ready to Join Us?</h3>
+            <p class="cta-description">
+                Don't miss this transformative experience. Register now to secure your spot at the Asian Biodynamic
+                Conference 2025.
+            </p>
+            <div class="cta-buttons">
+               <a href="index.html#pricing"> <button class="cta-btn-primary">Register Now</button></a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Loading simulation and table initialization
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simulate loading
+            setTimeout(function () {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('scheduleTable').style.display = 'table';
+
+                // Add fade-in animation
+                document.getElementById('scheduleTable').style.opacity = '0';
+                document.getElementById('scheduleTable').style.transition = 'opacity 0.5s ease-in-out';
+
+                setTimeout(function () {
+                    document.getElementById('scheduleTable').style.opacity = '1';
+                }, 100);
+            }, 1500);
+        });
+
+        // Responsive table handling
+        function handleTableResize() {
+            const table = document.querySelector('.schedule-table');
+            const container = document.querySelector('.table-container');
+
+            if (window.innerWidth <= 768) {
+                // Add touch scroll indicators for mobile
+                container.style.overflowX = 'auto';
+                container.style.webkitOverflowScrolling = 'touch';
+            }
+        }
+
+        // Initialize responsive handling
+        window.addEventListener('load', handleTableResize);
+        window.addEventListener('resize', handleTableResize);
+
+        // Smooth scroll for horizontal scrolling on mobile
+        let isScrolling = false;
+        const tableContainer = document.querySelector('.table-container');
+
+        tableContainer.addEventListener('scroll', function () {
+            if (!isScrolling) {
+                window.requestAnimationFrame(function () {
+                    // Add visual feedback for scrolling
+                    tableContainer.style.boxShadow = 'inset 0 0 10px rgba(0,0,0,0.1)';
+
+                    setTimeout(function () {
+                        tableContainer.style.boxShadow = 'none';
+                    }, 150);
+
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        });
+
+        // Print functionality
+        function printSchedule() {
+            window.print();
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const container = document.querySelector('.table-container');
+
+            if (e.key === 'ArrowLeft') {
+                container.scrollLeft -= 50;
+            } else if (e.key === 'ArrowRight') {
+                container.scrollLeft += 50;
+            }
+        });
+
+        // Performance optimization: Lazy load content
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        // Observe table rows for animation
+        document.querySelectorAll('tr').forEach(row => {
+            observer.observe(row);
+        });
+
+        // Add accessibility improvements
+        document.querySelectorAll('.schedule-table td').forEach(cell => {
+            if (cell.textContent.trim() === '') {
+                cell.setAttribute('aria-label', 'No scheduled activity');
+            }
+        });
+
+        // Mobile touch gestures
+        let startX = 0;
+        let scrollLeft = 0;
+
+        tableContainer.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].pageX - tableContainer.offsetLeft;
+            scrollLeft = tableContainer.scrollLeft;
+        });
+
+        tableContainer.addEventListener('touchmove', function (e) {
+            if (!startX) return;
+
+            e.preventDefault();
+            const x = e.touches[0].pageX - tableContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            tableContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        tableContainer.addEventListener('touchend', function () {
+            startX = 0;
+        });
+    </script>
+</body>
+
+</html>
