@@ -419,6 +419,9 @@ html {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1 1 calc(50% - 20px);
     border-radius: 12px;
     padding: 20px;
@@ -1849,7 +1852,8 @@ select {
     .cta-title {
         font-size: 1.3rem;
     }
-    .about-bio{
+
+    .about-bio {
         flex-direction: column;
     }
 }
@@ -2105,93 +2109,93 @@ select {
     color: #333;
 }
 
-.donate{
+.donate {
     text-align: center;
     background-color: #1e6b32;
 }
 
-.nav-links a .donate{
+.nav-links a .donate {
     color: #fff;
 }
 
 
 /*Contact*/
- .contact-query {
-            background-color: #f9fdfb;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-            margin: 40px auto;
-            max-width: 800px;
-        }
+.contact-query {
+    background-color: #f9fdfb;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 40px auto;
+    max-width: 800px;
+}
 
-        .contact-query .section-title {
-            font-size: 2rem;
-            color: #037a5a;
-            margin-bottom: 10px;
-        }
+.contact-query .section-title {
+    font-size: 2rem;
+    color: #037a5a;
+    margin-bottom: 10px;
+}
 
-        .contact-query .section-subtitle {
-            font-size: 1.1rem;
-            color: #444;
-            margin-bottom: 20px;
-        }
+.contact-query .section-subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
 
-        .contact-query .query-list {
-            text-align: left;
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #555;
-        }
+.contact-query .query-list {
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+}
 
-        .contact-query .query-list li {
-            margin-bottom: 8px;
-            list-style: disc;
-        }
+.contact-query .query-list li {
+    margin-bottom: 8px;
+    list-style: disc;
+}
 
-        .contact-query .contact-info {
-            font-size: 1rem;
-            margin: 15px 0;
-        }
+.contact-query .contact-info {
+    font-size: 1rem;
+    margin: 15px 0;
+}
 
-        .contact-query .contact-info a {
-            color: #037a5a;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.contact-query .contact-info a {
+    color: #037a5a;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .contact-query .contact-btn {
-            background-color: #037a5a;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+.contact-query .contact-btn {
+    background-color: #037a5a;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .contact-query .contact-btn:hover {
-            background-color: #025c45;
-        }
+.contact-query .contact-btn:hover {
+    background-color: #025c45;
+}
 
-        .cost-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
 
-        .buy-btn {
-            background-color: #037a5a;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.buy-btn {
+    background-color: #037a5a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-        .buy-btn:hover {
-            background-color: #025c45;
-        }
+.buy-btn:hover {
+    background-color: #025c45;
+}
