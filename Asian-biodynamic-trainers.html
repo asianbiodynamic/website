@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Introduction to Biodynamic Agriculture - Asian Biodynamic</title>
+    <link rel="icon" href="static/img/background.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+
+        /* Redesigned hero section without background overlay */
+        .hero-section {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+            padding: 3rem 0;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            order: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            color: #037a5a;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-content .description {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background-color: #037a5a;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-image-container {
+            order: 2;
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(3, 122, 90, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-caption {
+            background-color: rgba(3, 122, 90, 0.9);
+            color: white;
+            padding: 1rem;
+            border-radius: 0 0 15px 15px;
+            margin-top: -5px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .workshop-info {
+            background-color: #fff;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            max-width: 900px;
+            margin: 60px auto;
+            position: relative;
+        }
+
+        .workshop-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #037a5a, #4a9d7a);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .workshop-info h2 {
+            color: #037a5a;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .workshop-details {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            display: grid;
+            gap: 15px;
+        }
+
+        .workshop-details li {
+            padding: 15px;
+            font-size: 1.1rem;
+            color: #444;
+            background-color: #f8fffe;
+            border-radius: 10px;
+            border-left: 4px solid #037a5a;
+        }
+
+        .workshop-details strong {
+            color: #037a5a;
+            font-weight: 600;
+        }
+
+        .workshop-description {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            padding: 20px;
+            background-color: #f8fffe;
+            border-radius: 10px;
+        }
+
+        .register-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #037a5a, #4a9d7a);
+            color: #fff;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(3, 122, 90, 0.3);
+        }
+
+        .register-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(3, 122, 90, 0.4);
+        }
+
+        .accommodation-options {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .accommodation-options.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .accommodation-title {
+            color: #037a5a;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .option-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            background-color: #fff;
+            border: 3px solid #037a5a;
+            color: #037a5a;
+            padding: 25px 30px;
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 220px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #037a5a, #4a9d7a);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .option-btn:hover::before {
+            left: 0;
+        }
+
+        .option-btn:hover {
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(3, 122, 90, 0.3);
+        }
+
+        .option-price {
+            display: block;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 8px;
+        }
+
+        .back-btn {
+            background-color: #6c757d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #5a6268;
+            transform: translateY(-1px);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg, #037a5a, #025c45);
+            color: #fff;
+            padding: 4rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: #b8e6d3;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #b8e6d3;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 3rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced responsive design */
+        @media (max-width: 768px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image-container {
+                order: 1;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .workshop-info {
+                margin: 30px 15px;
+                padding: 30px 20px;
+            }
+
+            .workshop-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .option-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .option-btn {
+                min-width: 280px;
+                width: 100%;
+                max-width: 320px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-content .description {
+                font-size: 1rem;
+            }
+
+            .workshop-info {
+                margin: 20px 10px;
+                padding: 20px 15px;
+            }
+
+            .workshop-info h2 {
+                font-size: 1.6rem;
+            }
+
+            .nav-container {
+                padding: 0 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .hero-content h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .hero-content .description {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <div class="logo">AsianBiodynamic</div>
+            </a>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#program">Program</a>
+                <a href="index.html#faqs">FAQs</a>
+                <a href="contact.html">Contact</a>
+                <a href="donate.html" class="donate" style="color: #fff;">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Redesigned hero section with proper image display -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Asia Biodynamic Trainers & Multipliers Meeting</h1>
+                <p class="subtitle">4 & 5 November 2025, Pokhara Nepal</p>
+                <p class="description">Building a 'train-the-trainers' network and exploring collaborative ways to
+                    advance biodynamics across the Asia region.</p>
+                <div class="hero-badges">
+                    <span class="badge">Train-the-Trainers</span>
+                    <span class="badge">Asia Region</span>
+                    <span class="badge">Biodynamic Agriculture</span>
+                </div>
+                <ul class="workshop-details">
+                    <li><strong>Register:</strong>  Email to Maria Paz Bernaschina ( <a href="mailto:paz.bernaschina@demeter.net" style="color: black;">paz.bernaschina@demeter.net</a> )</li>
+                </ul>
+                <div id="initialRegistration">
+                    <a href="mailto:paz.bernaschina@demeter.net"><button class="register-btn">Register
+                            Now</button></a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/asian-bio%2Cjpg.jpg-UtDeQedDodls6BEX2LHtG5nspcgkuF.jpeg"
+                    alt="Asia Biodynamic Trainers & Multipliers Meeting - Group of agricultural professionals examining plants in a field"
+                    class="hero-image">
+                <div class="image-caption">
+                    Followed by the Asia Biodynamic Conference (6-9 November)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="workshop-info">
+        <div class="container">
+            <h2>🌱 Introduction to Biodynamic Agriculture</h2>
+            <ul class="workshop-details">
+                <li><strong>Date:</strong> 31st October – 1st November, 2025</li>
+                <li><strong>Venue:</strong> Kokila ko Organic Mangari Farm, Bhuddanilkhanta, Kathmandu</li>
+                <li><strong>Instructor:</strong> Led by Eduardo Rincon in collaboration with Peter Kearney, P. Anbu,
+                    Ritman Gurung and Sudarshan Chaudary</li>
+                <li><strong>Cost: <br></strong> €65 (Including Accommodation, Meals & Workshop Access)
+                    <br> €25 (Without Accommodation)
+                </li>
+                <li><strong>Limited Seats available:</strong> 30 only</li>
+            </ul>
+
+            <p class="workshop-description">
+                This intensive basic biodynamic workshop gives basic insight of biodynamic practices and its importance
+                in regenerative agriculture.
+                <br><br>
+                This workshop is open to farmers, agribusiness entrepreneurs, researchers and any interested in
+                regenerative agriculture.
+            </p>
+
+            <div id="initialRegistration">
+                <button id="registerBtn" class="register-btn">Register Now</button>
+            </div>
+
+            <div id="accommodationOptions" class="accommodation-options">
+                <h3 class="accommodation-title">Choose Your Registration Option</h3>
+                <ul class="workshop-details">
+                    <li><strong>Limited Seats available:</strong> 30 only</li>
+                </ul>
+                <div class="option-buttons">
+                    <a
+                        href="https://eventsmo.com/en/event/asian-biodynamic/tickets/254f3562-8fa0-4ef6-90a5-70be488e8960/reserve">
+                        <button id="withAccommodationBtn" class="option-btn">
+                            <i class="fas fa-bed" style="margin-bottom: 8px; font-size: 1.2rem;"></i>
+                            <span>With Accommodation</span>
+                            <span class="option-price">€65</span>
+                        </button>
+                    </a>
+
+                    <a
+                        href="https://eventsmo.com/en/event/asian-biodynamic/tickets/c68a0dc4-e0fd-40c6-a88f-c2f1f83e02d1/reserve">
+                        <button id="withoutAccommodationBtn" class="option-btn">
+                            <i class="fas fa-graduation-cap" style="margin-bottom: 8px; font-size: 1.2rem;"></i>
+                            <span>Without Accommodation</span>
+                            <span class="option-price">€25</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-section">
+                <div class="logo">
+                    <i class="fas fa-leaf logo-icon"></i>
+                    <h2>AsianBiodynamic <span>Nepal</span></h2>
+                </div>
+                <p class="tagline">
+                    Connecting, preserving biodiversity, and promoting sustainable agriculture worldwide.
+                </p>
+                <br />
+                <p class="tagline"><b>Host:</b>School of Spiritual Science <br>
+                    Section for Agriculture Goetheanum</p>
+                <br />
+                <p class="tagline"><b>Conference Partners:</b>Section for Agriculture, Geotheanum
+                    sektion-landwirtschaft.org <br>
+                    Biodynamic Federation Demeter International www.demeter.net</p>
+                <br />
+                <p class="tagline">Biodynamic Association India <br>
+                    Biodynamic Association Indonesia <br>
+                    Malaysia Demeter Association <br>
+                    China Demeter Association <br>
+                    Biodynamics Vietnam <br>
+                    Koberwitz 1924 Inc, Philippines <br>
+                    Biodynamic Philippines <br>
+                    Threefold Living Studio, Japan <br>
+                    Peaceful Nature School, Japan <br>
+                    Kokola Didiko Organic Farm, Kathmandu, Nepal <br>
+                    Tanahun Farm, Tanahun, Nepal <br>
+                    Pokhara Hotel Grand, Pokhara, Nepal <br>
+                    Maya Eco Village, Pokhara, Nepal <br>
+                    Maitreya Pathshala, Pokhara, Nepal <br>
+                    Mariche Village, Pokhara, Nepal <br>
+                    <br>
+                </p>
+                <p class="tagline"><b>Promotional Partner</b><br>
+                    Biodynamic Agriculture Australia
+                    <br>etc.
+                </p>
+            </div>
+
+            <div class="footer-section links-section">
+                <h3>Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#program">Program</a></li>
+                    <li><a href="index.html#faqs">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:healinghimalayas2025@gmail.com">healinghimalayas2025@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+977-9846526728">+977-9846526728</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/MNMyg9vQvH95FneH6"> <span>Pokhara Hotel Grand</span></a>
+                    </li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/groups/720136057386432/" class="social-icon facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/9846526728" class="social-icon whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 BiodynamicNepal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const registerBtn = document.getElementById("registerBtn");
+        const initialRegistration = document.getElementById("initialRegistration");
+        const accommodationOptions = document.getElementById("accommodationOptions");
+
+        registerBtn.addEventListener("click", function () {
+            initialRegistration.style.display = "none";
+            accommodationOptions.classList.add("show");
+        });
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                const hamburger = document.getElementById('hamburger');
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+
+            if (!navbar.contains(event.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
