@@ -542,20 +542,13 @@
 
 <!-- invitation form script -->
 <script>
-    const form = document.getElementById("form");
+const form = document.getElementById("form");
 const result = document.getElementById("result");
 
 form.addEventListener("submit", function (e) {
   const formData = new FormData(form);
   e.preventDefault();
 
-  const file = document.getElementById("attachment");
-  const filesize = file.files[0].size / 1024;
-
-  if (filesize > 1000) {
-    alert("Please upload file less than 1 MB");
-    return;
-  }
 
   result.innerHTML = "Please wait...";
 
